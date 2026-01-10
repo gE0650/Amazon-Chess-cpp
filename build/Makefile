@@ -347,6 +347,30 @@ src/search_engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/achess.dir/build.make CMakeFiles/achess.dir/src/search_engine.cpp.s
 .PHONY : src/search_engine.cpp.s
 
+src/startscreen.o: src/startscreen.cpp.o
+.PHONY : src/startscreen.o
+
+# target to build an object file
+src/startscreen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/achess.dir/build.make CMakeFiles/achess.dir/src/startscreen.cpp.o
+.PHONY : src/startscreen.cpp.o
+
+src/startscreen.i: src/startscreen.cpp.i
+.PHONY : src/startscreen.i
+
+# target to preprocess a source file
+src/startscreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/achess.dir/build.make CMakeFiles/achess.dir/src/startscreen.cpp.i
+.PHONY : src/startscreen.cpp.i
+
+src/startscreen.s: src/startscreen.cpp.s
+.PHONY : src/startscreen.s
+
+# target to generate assembly for a file
+src/startscreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/achess.dir/build.make CMakeFiles/achess.dir/src/startscreen.cpp.s
+.PHONY : src/startscreen.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -382,6 +406,9 @@ help:
 	@echo "... src/search_engine.o"
 	@echo "... src/search_engine.i"
 	@echo "... src/search_engine.s"
+	@echo "... src/startscreen.o"
+	@echo "... src/startscreen.i"
+	@echo "... src/startscreen.s"
 .PHONY : help
 
 

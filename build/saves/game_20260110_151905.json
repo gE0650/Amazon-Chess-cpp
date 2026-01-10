@@ -1,0 +1,167 @@
+{
+    "blocks": [
+        {
+            "col": 6,
+            "row": 2
+        }
+    ],
+    "currentPlayer": 0,
+    "history": [
+        {
+            "blocks": [
+            ],
+            "currentPlayer": 1,
+            "pieces": [
+                {
+                    "col": 3,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 6,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 0,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 9,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 3,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 6,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 0,
+                    "row": 6,
+                    "user": 0
+                },
+                {
+                    "col": 9,
+                    "row": 6,
+                    "user": 0
+                }
+            ],
+            "status": "playing"
+        },
+        {
+            "blocks": [
+            ],
+            "currentPlayer": 1,
+            "pieces": [
+                {
+                    "col": 3,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 6,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 0,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 9,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 3,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 6,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 0,
+                    "row": 6,
+                    "user": 0
+                },
+                {
+                    "col": 9,
+                    "row": 6,
+                    "user": 0
+                }
+            ],
+            "status": "playing"
+        }
+    ],
+    "id": "",
+    "mode": "pvp",
+    "moves": [
+        {
+            "from": {
+                "col": 6,
+                "row": 0
+            },
+            "to": {
+                "col": 4,
+                "row": 2
+            },
+            "ts": 108505924152805,
+            "type": "move"
+        }
+    ],
+    "pieces": [
+        {
+            "col": 3,
+            "row": 0,
+            "user": 1
+        },
+        {
+            "col": 4,
+            "row": 2,
+            "user": 1
+        },
+        {
+            "col": 0,
+            "row": 3,
+            "user": 1
+        },
+        {
+            "col": 9,
+            "row": 3,
+            "user": 1
+        },
+        {
+            "col": 3,
+            "row": 9,
+            "user": 0
+        },
+        {
+            "col": 6,
+            "row": 9,
+            "user": 0
+        },
+        {
+            "col": 0,
+            "row": 6,
+            "user": 0
+        },
+        {
+            "col": 9,
+            "row": 6,
+            "user": 0
+        }
+    ],
+    "status": "playing",
+    "winner": null
+}

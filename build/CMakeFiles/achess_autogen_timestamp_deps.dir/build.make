@@ -66,8 +66,8 @@ include CMakeFiles/achess_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/achess_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
+CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/achess_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic

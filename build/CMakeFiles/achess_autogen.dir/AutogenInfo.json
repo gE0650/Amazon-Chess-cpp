@@ -222,6 +222,12 @@
 			"MU",
 			"6YEA5652QU/moc_search_engine.cpp",
 			null
+		],
+		[
+			"/home/ge/achess-c/include/startscreen.h",
+			"MU",
+			"6YEA5652QU/moc_startscreen.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -289,7 +295,8 @@
 		[ "/home/ge/achess-c/src/chessgame.cpp", "MU", null ],
 		[ "/home/ge/achess-c/src/main.cpp", "MU", null ],
 		[ "/home/ge/achess-c/src/mainwindow.cpp", "MU", null ],
-		[ "/home/ge/achess-c/src/search_engine.cpp", "MU", null ]
+		[ "/home/ge/achess-c/src/search_engine.cpp", "MU", null ],
+		[ "/home/ge/achess-c/src/startscreen.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

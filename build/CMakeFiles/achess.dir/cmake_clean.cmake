@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/achess.dir/src/mainwindow.cpp.o.d"
   "CMakeFiles/achess.dir/src/search_engine.cpp.o"
   "CMakeFiles/achess.dir/src/search_engine.cpp.o.d"
+  "CMakeFiles/achess.dir/src/startscreen.cpp.o"
+  "CMakeFiles/achess.dir/src/startscreen.cpp.o.d"
   "achess"
   "achess.pdb"
   "achess_autogen/mocs_compilation.cpp"

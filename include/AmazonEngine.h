@@ -24,9 +24,13 @@ public:
     // 暴露给外部（如 MainWindow）调用的接口
     MoveResult movePiece(Point from, Point to);
     MoveResult placeArrow(Point target);
+    bool undo();
     
     // 获取当前棋盘状态用于渲染
     const AmazonBoard& getBoard() const { return currentBoard; }
+    
+    // 从外部设置棋盘（用于读档）
+    void setBoard(const AmazonBoard& board) { currentBoard = board; }
 
 private:
     AmazonBoard currentBoard;

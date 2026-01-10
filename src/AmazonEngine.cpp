@@ -26,10 +26,10 @@ AmazonEngine::AmazonEngine() {
 MoveResult AmazonEngine::movePiece(Point from, Point to) {
     // 1. 基础校验
     if (!GameLogic::inBounds(from.col, from.row) || !GameLogic::inBounds(to.col, to.row))
-        return {false, "坐标越界"};
+        return {false, "Out of bounds"};
 
     if (currentBoard.status == "finished")
-        return {false, "游戏已结束"};
+        return {false, "Game finished"};
 
     // 2. 查找棋子
     int pIdx = -1;
@@ -40,14 +40,24 @@ MoveResult AmazonEngine::movePiece(Point from, Point to) {
         }
     }
 
-    if (pIdx == -1) return {false, "此处无棋子"};
+    if (pIdx == -1) return {false, "No piece here"};
     if (currentBoard.pieces[pIdx].user != currentBoard.currentPlayer)
-        return {false, "不是你的回合"};
+        return {false, "Not your turn"};
+
+    // 存档 (History Snapshot) 用于悔棋功能
+    // 在移动棋子之前保存状态，这样悔棋可以回到“本回合开始前”
+    GameSnapshot snapshot;
+    snapshot.pieces = currentBoard.pieces;
+    snapshot.blocks = currentBoard.blocks;
+    snapshot.currentPlayer = currentBoard.currentPlayer;
+    snapshot.status = currentBoard.status;
+    snapshot.winner = currentBoard.winner;
+    currentBoard.history.push_back(snapshot);
 
     // 3. 走法校验 (调用之前写的 GameLogic)
-    if (!GameLogic::isLineMove(from, to)) return {false, "非直线移动"};
+    if (!GameLogic::isLineMove(from, to)) return {false, "Not a linear move"};
     if (!GameLogic::isPathClear(from, to, currentBoard.pieces, currentBoard.blocks))
-        return {false, "路径被阻挡"};
+        return {false, "Path blocked"};
 
     // 4. 执行移动
     currentBoard.pieces[pIdx].col = to.col;
@@ -60,23 +70,16 @@ MoveResult AmazonEngine::movePiece(Point from, Point to) {
     rec.to = to;
     currentBoard.moves.push_back(rec);
 
-    return {true, "移动成功"};
+    return {true, "Move successful"};
 }
 
 // 对应原 exports.PlaceBlock
 MoveResult AmazonEngine::placeArrow(Point target) {
-    if (!GameLogic::inBounds(target.col, target.row)) return {false, "坐标越界"};
+    if (!GameLogic::inBounds(target.col, target.row)) return {false, "Out of bounds"};
     
     // 检查占用 (假设 currentBoard 有 isOccupied 方法)
     if (currentBoard.isOccupied(target.col, target.row))
-        return {false, "位置已被占用"};
-
-    // 存档 (History Snapshot) 用于悔棋功能
-    GameSnapshot snapshot;
-    snapshot.pieces = currentBoard.pieces;
-    snapshot.blocks = currentBoard.blocks;
-    snapshot.currentPlayer = currentBoard.currentPlayer;
-    currentBoard.history.push_back(snapshot);
+        return {false, "Position occupied"};
 
     // 放置障碍
     currentBoard.blocks.push_back(target);
@@ -90,7 +93,7 @@ MoveResult AmazonEngine::placeArrow(Point target) {
     bool canNextMove = GameLogic::canPlayerMove(nextPlayer, currentBoard.pieces, currentBoard.blocks);
     bool canLastMove = GameLogic::canPlayerMove(lastPlayer, currentBoard.pieces, currentBoard.blocks);
 
-    MoveResult res = {true, "射箭成功"};
+    MoveResult res = {true, "Shot successful"};
     
     // 判定逻辑：如果对手没法动了，当前射箭的人赢
     if (!canNextMove) {
@@ -101,4 +104,18 @@ MoveResult AmazonEngine::placeArrow(Point target) {
     }
 
     return res;
+}
+
+bool AmazonEngine::undo() {
+    if (currentBoard.history.isEmpty()) return false;
+
+    const GameSnapshot& last = currentBoard.history.last();
+    currentBoard.pieces = last.pieces;
+    currentBoard.blocks = last.blocks;
+    currentBoard.currentPlayer = last.currentPlayer;
+    currentBoard.status = last.status;
+    currentBoard.winner = last.winner;
+
+    currentBoard.history.removeLast();
+    return true;
 }

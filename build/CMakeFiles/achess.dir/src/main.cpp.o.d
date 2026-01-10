@@ -1,7 +1,7 @@
 CMakeFiles/achess.dir/src/main.cpp.o: /home/ge/achess-c/src/main.cpp \
- /usr/include/stdc-predef.h /home/ge/achess-c/include/mainwindow.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+ /usr/include/stdc-predef.h /home/ge/achess-c/include/startscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -137,7 +137,6 @@ CMakeFiles/achess.dir/src/main.cpp.o: /home/ge/achess-c/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiexports.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
@@ -334,38 +333,44 @@ CMakeFiles/achess.dir/src/main.cpp.o: /home/ge/achess-c/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintEvent \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
- /home/ge/achess-c/include/AmazonEngine.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
@@ -389,15 +394,52 @@ CMakeFiles/achess.dir/src/main.cpp.o: /home/ge/achess-c/src/main.cpp \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfoList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
+ /home/ge/achess-c/include/mainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
+ /home/ge/achess-c/include/AmazonEngine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h \
@@ -413,6 +455,9 @@ CMakeFiles/achess.dir/src/main.cpp.o: /home/ge/achess-c/src/main.cpp \
  /home/ge/achess-c/include/GameLogic.h /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
+ /home/ge/achess-c/include/search_engine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \

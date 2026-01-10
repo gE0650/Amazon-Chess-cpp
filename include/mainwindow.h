@@ -4,15 +4,33 @@
 #include <QMainWindow>
 #include <QPaintEvent>
 #include <QMouseEvent>
+#include <QPushButton>
+#include <QLabel>
+#include <QTimer>
 #include "AmazonEngine.h"
+#include "search_engine.h"
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr, bool vsAI = false);
     ~MainWindow();
+    
+    // 加载存档接口
+    bool loadGame(const QString &filePath);
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
+signals:
+    void gameClosed();
+
+private slots:
+    void onUndo();
+    void onSaveGame();
+    void runAITurn();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
@@ -20,6 +38,9 @@ protected:
 
 private:
     AmazonEngine engine;
+    SearchEngine aiEngine;
+    bool isPvE;
+    bool aiThinking;
     
     // UI 状态
     Point selectedPiece = {-1, -1}; // 当前选中的棋子
@@ -35,6 +56,10 @@ private:
     void drawBoard(QPainter &painter);
     void drawPieces(QPainter &painter);
     void drawHighlights(QPainter &painter);
+    void showMessage(const QString &msg, bool isError = false);
+    void updateTurnInfo();
+
+    QLabel *statusLabel;
 };
 
 #endif // MAINWINDOW_H

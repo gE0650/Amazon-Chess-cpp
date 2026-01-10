@@ -1,0 +1,187 @@
+{
+    "blocks": [
+        {
+            "col": 5,
+            "row": 2
+        },
+        {
+            "col": 2,
+            "row": 3
+        }
+    ],
+    "currentPlayer": 1,
+    "history": [
+        {
+            "blocks": [
+            ],
+            "currentPlayer": 1,
+            "pieces": [
+                {
+                    "col": 3,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 6,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 0,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 9,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 3,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 6,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 0,
+                    "row": 6,
+                    "user": 0
+                },
+                {
+                    "col": 9,
+                    "row": 6,
+                    "user": 0
+                }
+            ],
+            "status": "playing"
+        },
+        {
+            "blocks": [
+                {
+                    "col": 5,
+                    "row": 2
+                }
+            ],
+            "currentPlayer": 0,
+            "pieces": [
+                {
+                    "col": 3,
+                    "row": 0,
+                    "user": 1
+                },
+                {
+                    "col": 4,
+                    "row": 2,
+                    "user": 1
+                },
+                {
+                    "col": 0,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 9,
+                    "row": 3,
+                    "user": 1
+                },
+                {
+                    "col": 3,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 6,
+                    "row": 9,
+                    "user": 0
+                },
+                {
+                    "col": 0,
+                    "row": 6,
+                    "user": 0
+                },
+                {
+                    "col": 9,
+                    "row": 6,
+                    "user": 0
+                }
+            ],
+            "status": "playing"
+        }
+    ],
+    "id": "",
+    "mode": "pvp",
+    "moves": [
+        {
+            "from": {
+                "col": 6,
+                "row": 0
+            },
+            "to": {
+                "col": 4,
+                "row": 2
+            },
+            "ts": 106634425662949,
+            "type": "move"
+        },
+        {
+            "from": {
+                "col": 0,
+                "row": 6
+            },
+            "to": {
+                "col": 3,
+                "row": 3
+            },
+            "ts": 106634425662949,
+            "type": "move"
+        }
+    ],
+    "pieces": [
+        {
+            "col": 3,
+            "row": 0,
+            "user": 1
+        },
+        {
+            "col": 4,
+            "row": 2,
+            "user": 1
+        },
+        {
+            "col": 0,
+            "row": 3,
+            "user": 1
+        },
+        {
+            "col": 9,
+            "row": 3,
+            "user": 1
+        },
+        {
+            "col": 3,
+            "row": 9,
+            "user": 0
+        },
+        {
+            "col": 6,
+            "row": 9,
+            "user": 0
+        },
+        {
+            "col": 3,
+            "row": 3,
+            "user": 0
+        },
+        {
+            "col": 9,
+            "row": 6,
+            "user": 0
+        }
+    ],
+    "status": "playing",
+    "winner": null
+}

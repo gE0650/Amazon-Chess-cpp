@@ -1,0 +1,5 @@
+/home/ge/achess-c/build/CMakeFiles/achess.dir
+/home/ge/achess-c/build/CMakeFiles/edit_cache.dir
+/home/ge/achess-c/build/CMakeFiles/rebuild_cache.dir
+/home/ge/achess-c/build/CMakeFiles/achess_autogen_timestamp_deps.dir
+/home/ge/achess-c/build/CMakeFiles/achess_autogen.dir

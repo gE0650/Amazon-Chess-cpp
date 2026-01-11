@@ -8,18 +8,17 @@ AmazonEngine::AmazonEngine() {
     currentBoard.pieces.clear();
     currentBoard.blocks.clear();
 
-    // 初始化红方棋子 (1)
-    // 假设 10x10 棋盘，标准开局位置
-    currentBoard.pieces.push_back({3, 0, 1}); // (col, row, user)
-    currentBoard.pieces.push_back({6, 0, 1});
-    currentBoard.pieces.push_back({0, 3, 1});
-    currentBoard.pieces.push_back({9, 3, 1});
+    // 初始化红方棋子 (1) - 8x8 适配
+    currentBoard.pieces.push_back({2, 0, 1}); // (col, row, user)
+    currentBoard.pieces.push_back({5, 0, 1});
+    currentBoard.pieces.push_back({0, 2, 1});
+    currentBoard.pieces.push_back({7, 2, 1});
 
-    // 初始化蓝方棋子 (0)
-    currentBoard.pieces.push_back({3, 9, 0});
-    currentBoard.pieces.push_back({6, 9, 0});
-    currentBoard.pieces.push_back({0, 6, 0});
-    currentBoard.pieces.push_back({9, 6, 0});
+    // 初始化蓝方棋子 (0) - 8x8 适配
+    currentBoard.pieces.push_back({2, 7, 0});
+    currentBoard.pieces.push_back({5, 7, 0});
+    currentBoard.pieces.push_back({0, 5, 0});
+    currentBoard.pieces.push_back({7, 5, 0});
 }
 
 // 对应原 exports.Movepiece

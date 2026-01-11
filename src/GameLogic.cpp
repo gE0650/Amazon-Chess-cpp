@@ -2,7 +2,7 @@
 #include <cmath>
 
 bool GameLogic::inBounds(int col, int row) {
-    return col >= 0 && col < 10 && row >= 0 && row < 10;
+    return col >= 0 && col < 8 && row >= 0 && row < 8;
 }
 
 bool GameLogic::isLineMove(Point from, Point to) {

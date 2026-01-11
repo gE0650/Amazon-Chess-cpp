@@ -32,7 +32,7 @@ private:
     double runMonteCarlo(AmazonBoard board, int player, int iterations);
     
     // 中心控制权重矩阵
-    int centerWeights[10][10];
+    int centerWeights[8][8];
 };
 
 #endif // SEARCH_ENGINE_H

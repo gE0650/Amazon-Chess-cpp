@@ -9,11 +9,11 @@
 
 SearchEngine::SearchEngine() {
     // 初始化中心权重 (越靠近中心分越高)
-    for(int r=0; r<10; ++r) {
-        for(int c=0; c<10; ++c) {
+    for(int r=0; r<8; ++r) {
+        for(int c=0; c<8; ++c) {
             // 简单的中心距离计算
-            double dist = std::sqrt(std::pow(r - 4.5, 2) + std::pow(c - 4.5, 2));
-            centerWeights[c][r] = 10 - (int)dist; 
+            double dist = std::sqrt(std::pow(r - 3.5, 2) + std::pow(c - 3.5, 2));
+            centerWeights[c][r] = 8 - (int)dist; 
         }
     }
 }
@@ -39,8 +39,8 @@ QVector<Point> getReachable(const AmazonBoard& board, Point p) {
     
     // 为了效率，构建临时 occupied set
     // 注意：实际高频调用时应传入 set 或 grid 数组，这里为了代码简洁直接遍历
-    // 优化：使用简单的 10x10 bool 数组
-    bool occupied[10][10] = {false};
+    // 优化：使用简单的 8x8 bool 数组
+    bool occupied[8][8] = {false};
     for(const auto& pc : board.pieces) occupied[pc.col][pc.row] = true;
     for(const auto& bk : board.blocks) occupied[bk.col][bk.row] = true;
 
@@ -50,7 +50,7 @@ QVector<Point> getReachable(const AmazonBoard& board, Point p) {
         while(true) {
             x += dirs[i][0];
             y += dirs[i][1];
-            if(x < 0 || x >= 10 || y < 0 || y >= 10) break;
+            if(x < 0 || x >= 8 || y < 0 || y >= 8) break;
             if(occupied[x][y]) break;
             moves.push_back({x, y});
         }
@@ -118,10 +118,7 @@ double SearchEngine::runMonteCarlo(AmazonBoard board, int player, int depth) {
 }
 
 FullMove SearchEngine::getBestMove(const AmazonBoard& board, int player) {
-    // 核心算法：Alpha-Beta 剪枝 + 启发式搜索
-    // 由于分支因子巨大，我们采用两阶段搜索：
-    // 1. 找出所有棋子的可行移动，评估“移动后”的局面，选出 Top K 个好的移动
-    // 2. 对这 Top K 个移动，穷举所有射箭位置，选出最佳组合
+    
 
     QVector<FullMove> candidates;
     

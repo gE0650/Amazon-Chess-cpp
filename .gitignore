@@ -1,0 +1,34 @@
+# Build directories
+build/
+bin/
+lib/
+
+# Object files and libraries
+*.o
+*.obj
+*.a
+*.so
+*.lib
+*.dll
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.user
+*.suo
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.cmake
+install_manifest.txt
+
+# Game saves
+saves/
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -73,7 +73,7 @@ public:
 
     // 常用逻辑辅助函数
     bool isOutOfBounds(int col, int row) const {
-        return col < 0 || col >= 10 || row < 0 || row >= 10;
+        return col < 0 || col >= 8 || row < 0 || row >= 8;
     }
 
     /**

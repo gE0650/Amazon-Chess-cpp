@@ -1,1 +1,40 @@
+# Amazon Chess (C++ / Qt)
+
+这是一个基于 C++ 和 Qt 框架开发的亚马逊棋（Amazon Chess）游戏，适配 8x8 棋盘变体。项目集成了高性能 AI、现代化的 UI 界面以及完整的存档管理系统。
+
+## 功能特性 (Features)
+- **PvP 对战**: 传统的双人本地同屏竞技。
+- **PvE 对战**: 挑战内置的高级 AI，体验不同阶段的博弈策略。
+- **存档系统**: 支持随时保存和加载游戏（JSON 格式），且读档后完全保留悔棋历史。
+- **矢量 UI**: 基于代码生成的纯矢量图形界面，支持无损缩放，拥有立体质感的棋子渲染。
+
+## 技术实现 (Technical Details)
+
+### 1. AI 决策系统
+核心算法位于 `SearchEngine` 和独立 Bot 中，采用 **Beam Search (束搜索)** 框架：
+- **混合状态策略**: 能够识别棋局是否进入“官子阶段”（双方隔离）。当处于混合状态（部分隔离、部分接触）时，AI 会强制优先处理前线棋子，并采用高权重的“封堵”策略限制对手。
+- **评估函数**: 综合考量 **灵活性 (Mobility)**、**领地控制 (Territory/BFS Distance)** 和 **中心控制权重**。
+- **Botzone 适配**: 提供单文件版本 (`botzone_submission.cpp`)，包含并查集 (DSU) 和拓扑排序思想的精简实现。
+
+### 2. UI 渲染架构
+界面开发摒弃了传统的控件堆叠，完全基于 Qt 的 **Painter System (自绘系统)**：
+- **绘制机制**: 重写 `paintEvent`，使用 `QPainter` 的 API（如 `drawRect`, `QRadialGradient`）实时计算并绘制棋盘格、立体棋子和动态高亮。
+- **交互逻辑**: 在 `MainWindow` 中维护一个显式的状态机（State Machine），处理 `Select` -> `Move` -> `Shoot` 的输入流。
+
+### 3. 数据结构与存储
+- **内存表示**: 运行时采用 **稀疏列表 (Sparse Lists)** 结构 (`QVector<Piece>`, `QVector<Point>`) 维护棋局，而非传统的二维数组。这使得遍历存活棋子和生成移动极其高效。
+- **持久化**: 通过 `AmazonPersistence` 类实现完整的序列化。存档采用 **JSON** 格式，不仅保存当前盘面，还完整保存了 `History Stack`，实现了“读档后仍可悔棋”的高级功能。
+
+## 构建指南
+本项目使用 CMake 构建：
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./achess
+```
+
+## 声明
 本项目基于 Qt 开源版开发

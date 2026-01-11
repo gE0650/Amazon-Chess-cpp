@@ -48,7 +48,7 @@ private:
     bool isShooting = false;        // 是否正在等待放置障碍(射箭)
 
     // 绘制辅助参数
-    const int cellSize = 60;
+    const int cellSize = 75;
     const int boardOffset = 50;
 
     // 辅助函数

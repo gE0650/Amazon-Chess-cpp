@@ -14,7 +14,7 @@ public:
 
 private:
     // 辅助函数：将坐标转换为唯一索引
-    static inline int getPosKey(int c, int r) { return r * 10 + c; }
+    static inline int getPosKey(int c, int r) { return r * 8 + c; }
     // 获取当前所有被占用的位置集合
     static std::set<int> getOccupiedPositions(const QVector<Piece>& pieces, const QVector<Point>& blocks);
 };

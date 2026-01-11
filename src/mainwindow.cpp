@@ -143,7 +143,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 Point MainWindow::pixelToGrid(int x, int y) {
     int col = (x - boardOffset) / cellSize;
     int row = (y - boardOffset) / cellSize;
-    if (col < 0 || col >= 10 || row < 0 || row >= 10) {
+    if (col < 0 || col >= 8 || row < 0 || row >= 8) {
         return {-1, -1};
     }
     return {col, row};
@@ -170,7 +170,7 @@ void MainWindow::paintEvent(QPaintEvent *event) {
     // 现在先用之前硬编码的逻辑绘制优化后的颜色。
     
     // 为了美观，我们绘制一个底板阴影
-    QRect boardRect(boardOffset - 5, boardOffset - 5, 10 * cellSize + 10, 10 * cellSize + 10);
+    QRect boardRect(boardOffset - 5, boardOffset - 5, 8 * cellSize + 10, 8 * cellSize + 10);
     painter.setPen(Qt::NoPen);
     painter.setBrush(QColor(0,0,0,50));
     painter.drawRoundedRect(boardRect.translated(5, 5), 5, 5); 
@@ -186,8 +186,8 @@ void MainWindow::drawBoard(QPainter &painter) {
     QColor lightColor("#F0D9B5"); // 经典浅色
     QColor darkColor("#B58863");  // 经典深色
 
-    for (int i = 0; i < 10; ++i) {
-        for (int j = 0; j < 10; ++j) {
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
             QRect rect(boardOffset + i * cellSize, boardOffset + j * cellSize, cellSize, cellSize);
             if ((i + j) % 2 == 0) {
                 painter.fillRect(rect, lightColor);
@@ -200,7 +200,7 @@ void MainWindow::drawBoard(QPainter &painter) {
     // 绘制外边框
     painter.setPen(QPen(QColor("#8B4513"), 2));
     painter.setBrush(Qt::NoBrush);
-    painter.drawRect(boardOffset, boardOffset, 10 * cellSize, 10 * cellSize);
+    painter.drawRect(boardOffset, boardOffset, 8 * cellSize, 8 * cellSize);
 }
 
 void MainWindow::drawPieces(QPainter &painter) {
